@@ -1,4 +1,3 @@
-import "./App.css";
 import styles from "./App.module.css";
 import Cursors from "./src/components/Cursors";
 function App() {
