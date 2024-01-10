@@ -13,6 +13,16 @@ function App() {
         expedita ab, totam commodi quia. Accusamus explicabo quae sit eum
         possimus magnam.
         <a href="">this is the second link</a>
+        <textarea name="" id="" cols={30} rows={30}></textarea>
+        <button>button</button>
+        <div
+          style={{
+            width: "500px",
+            height: "150px",
+            border: "1px solid red",
+            margin: "20px",
+          }}
+        ></div>
       </div>
     </Cursors>
   );
