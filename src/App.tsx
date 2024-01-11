@@ -1,8 +1,8 @@
 import styles from "./App.module.css";
-import Cursors from "./src/components/Cursors";
+import Cursors from "./components/Cursors";
 function App() {
   return (
-    <Cursors>
+    <Cursors type="cyan">
       <h1 className={styles.title}>Cursors Working ...</h1>
       <div className={styles.mainContainer}>
         my container
@@ -13,7 +13,7 @@ function App() {
         expedita ab, totam commodi quia. Accusamus explicabo quae sit eum
         possimus magnam.
         <a href="">this is the second link</a>
-        <textarea name="" id="" cols={30} rows={30}></textarea>
+        <textarea name="" id="" cols={40} rows={10}></textarea>
         <button>button</button>
         <div
           style={{
