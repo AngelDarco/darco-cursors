@@ -19,6 +19,7 @@ export default defineConfig({
       external: ["react", "react-dom"],
       output: {
         dir: "dist",
+        exports: "named",
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
