@@ -1,13 +1,13 @@
-import { CustomCursors } from "../types/types";
+import { CustomCursorsProps } from "../types";
 interface ImagesImportProps {
   [key: string]: string;
 }
 
-async function ImagesImport(obj: ImagesImportProps) {
-  const arr: CustomCursors = {};
+async function resolveCursorImports(obj: ImagesImportProps) {
+  const arr: CustomCursorsProps = {};
   for (const [key, value] of Object.entries(obj)) {
     const res = await loadImage(value);
-    arr[key as keyof CustomCursors] = res;
+    arr[key as keyof CustomCursorsProps] = res;
   }
   return arr;
 }
@@ -17,4 +17,4 @@ const loadImage = async (fileName: string) => {
   return imgModule.default;
 };
 
-export default ImagesImport;
+export default resolveCursorImports;
