@@ -18,8 +18,18 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* modules build config */
+    "declaration": true,
+    "removeComments": true,
+    "emitDeclarationOnly": false,
+    "outDir": "dist",
+    "exactOptionalPropertyTypes": true
   },
-  "include": ["src"],
+
+  /* modules build config */
+  "typeRoots": ["./@types"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
