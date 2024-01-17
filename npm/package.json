@@ -1,0 +1,38 @@
+{
+  "name": "darco-cursors",
+  "version": "1.0.2",
+  "type": "module",
+  "module": "index.js",
+  "main": "index.umd.js",
+  "types": "/@types/index.d.ts",
+  "description": "Custom Cursors Neon",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.umd.js",
+      "default": "./index.js",
+      "types": "./@types/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "compilerOptions": {
+    "typeRoots": [
+      "./@types"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AngelDarco/darco-cursors.git"
+  },
+  "homepage": "https://github.com/AngelDarco/darco-cursors.git#readme",
+  "keywords": [
+    "darco-cursors",
+    "custom-cursors",
+    "neon-cursors"
+  ],
+  "author": "Angel GP, Darco",
+  "license": "ISC"
+}
