@@ -1,4 +1,4 @@
-import styles from "../components/cursor-styles.module.css";
+import cursorsStyles from "./exportCursorStyles";
 
 class CursorEvents {
   private container: HTMLDivElement;
@@ -7,23 +7,23 @@ class CursorEvents {
   }
 
   private general() {
-    this.container.classList.add(`${styles.general}`);
+    this.container.classList.add(`${cursorsStyles.general}`);
     this.container.querySelectorAll("button").forEach((el) => {
       if (el instanceof HTMLButtonElement)
-        el.classList.add(`${styles.general}`);
+        el.classList.add(`${cursorsStyles.general}`);
     });
   }
 
   private pointer() {
     this.container.querySelectorAll("a").forEach((el) => {
-      el.classList.add(`${styles.pointer}`);
+      el.classList.add(`${cursorsStyles.pointer}`);
     });
   }
 
   private text() {
     const elements = "input, textarea";
     this.container.querySelectorAll(elements).forEach((el) => {
-      el.classList.add(`${styles.text}`);
+      el.classList.add(`${cursorsStyles.text}`);
     });
   }
 

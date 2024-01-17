@@ -1,9 +1,12 @@
-import { CustomCursors } from "../types/types";
+import { CustomCursorsProps } from "../types";
 
 class ChangeCursors {
-  private cursors: CustomCursors;
+  private cursors: CustomCursorsProps;
   private container: HTMLDivElement;
-  constructor(cursors: CustomCursors, container: HTMLDivElement) {
+  constructor(cursors: CustomCursorsProps, container: HTMLDivElement) {
+    if (!container || !(container instanceof HTMLDivElement)) {
+      throw new Error("Invalid container provided.");
+    }
     this.cursors = cursors;
     this.container = container;
   }
