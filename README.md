@@ -36,7 +36,7 @@ The types are available in `@types/index.d`
 - `type`: `DefaultCursorTypesProps`
 - `customCursors`: `CustomCursorsProps`
 - `style`: `React.CSSProperties`
-- `className`: `IntrinsicAttributes`
+- `className`: `string`
 
 ### `DefaultCursorTypesProps`
 
