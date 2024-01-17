@@ -1,10 +1,11 @@
 import { CustomCursorsProps } from "../types";
-interface ImagesImportProps {
-  [key: string]: string;
-}
 
-async function resolveCursorImports(obj: ImagesImportProps) {
-  const arr: CustomCursorsProps = {};
+async function resolveCursorImports(obj: CustomCursorsProps) {
+  const arr: CustomCursorsProps = {
+    general: "",
+    pointer: "",
+    text: "",
+  };
   for (const [key, value] of Object.entries(obj)) {
     const res = await loadImage(value);
     arr[key as keyof CustomCursorsProps] = res;
@@ -13,7 +14,7 @@ async function resolveCursorImports(obj: ImagesImportProps) {
 }
 
 const loadImage = async (fileName: string) => {
-  const imgModule = await import(fileName);
+  const imgModule = await import(fileName); /* @vite-ignore */
   return imgModule.default;
 };
 
