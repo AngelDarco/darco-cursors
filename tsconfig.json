@@ -24,12 +24,12 @@
     "declaration": true,
     "removeComments": true,
     "emitDeclarationOnly": false,
-    "outDir": "dist",
+    // "outDir": "dist",
     "exactOptionalPropertyTypes": true
   },
 
   /* modules build config */
   "typeRoots": ["./@types"],
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -6,15 +6,16 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",
   build: {
     lib: {
       name: "index",
       fileName: "index",
-      entry: "src/components/Cursors.tsx",
+      entry: "src/components/index.ts",
       formats: ["es", "umd", "cjs"],
     },
     minify: true,
-    emptyOutDir: true,
+    emptyOutDir: false,
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
