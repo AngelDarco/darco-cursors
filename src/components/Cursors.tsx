@@ -5,10 +5,9 @@ import resolveCursorImports from "../utils/resolveCursorImports";
 import defaultCursors from "../utils/cursorsDB";
 import styles from "./cursor-styles.module.css";
 import ChangeCursors from "../utils/ChangeCursors";
-import cursorsStyles from "../utils/exportCursorStyles";
 
 const Cursors = ({ ...props }: CursorsProps) => {
-  const { children, type, customCursors, style, className } = props;
+  const { children, type, customCursors, className, style } = props;
   const containerRef = useRef<HTMLDivElement>(null);
   const [typeCursors, setTypeCursors] = useState<CustomCursorsProps>();
 
@@ -27,28 +26,27 @@ const Cursors = ({ ...props }: CursorsProps) => {
       const newCursor = defaultCursors[type as keyof typeof defaultCursors];
       setTypeCursors(newCursor);
     } else if (customCursors) {
-      /* change cursors to users customCursors values - customCursors */
+      /* change cursors to users custom cursors values - customCursors */
       setTypeCursors(customCursors);
     } else {
+      /* change cursors to the default color if type is not set - blue */
       setTypeCursors(defaultCursors.blue);
     }
   }, [customCursors, type]);
 
-  /* change cursors to the default color if type is not set - blue */
   useEffect(() => {
     if (containerRef.current) new CursorEvents(containerRef.current).all();
-  }, []);
+  }, [children]);
 
   return (
     <div
       ref={containerRef}
-      className={`${styles.mainContainer} ${className}`}
-      style={style}
+      className={`${styles.mainContainer}  ${className ? className : ""}`}
+      style={style && style}
     >
       {children}
     </div>
   );
 };
 // eslint-disable-next-line react-refresh/only-export-components
-export { cursorsStyles };
 export default Cursors;
