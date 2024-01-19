@@ -1,4 +1,4 @@
-import cursorsStyles from "./exportCursorStyles";
+import cursorsStyles from "./CursorsStyles";
 
 class CursorEvents {
   private container: HTMLDivElement;

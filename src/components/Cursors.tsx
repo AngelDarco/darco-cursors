@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { CursorsProps, CustomCursorsProps } from "../types";
 import CursorEvents from "../utils/CursorEvents";
-import resolveCursorImports from "../utils/resolveCursorImports";
 import defaultCursors from "../utils/cursorsDB";
 import styles from "./cursor-styles.module.css";
 import ChangeCursors from "../utils/ChangeCursors";
@@ -14,10 +13,8 @@ const Cursors = ({ ...props }: CursorsProps) => {
   /* retrieve cursors from local database */
   useEffect(() => {
     if (typeCursors)
-      resolveCursorImports(typeCursors).then((res) => {
-        if (containerRef.current)
-          new ChangeCursors(res, containerRef.current).all();
-      });
+      if (containerRef.current)
+        new ChangeCursors(typeCursors, containerRef.current).all();
   }, [typeCursors]);
 
   /* change cursors between default colors - type*/
