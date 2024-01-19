@@ -3,6 +3,7 @@ export declare type CursorEventsProps = {
 };
 
 declare const Cursors: (props: CursorsProps) => JSX.Element;
+export { Cursors }
 export default Cursors;
 
 export declare interface CursorsProps {
@@ -12,6 +13,8 @@ export declare interface CursorsProps {
     className?: string;
     style?: React.CSSProperties;
 }
+
+export declare const CursorsStyles:CustomCursorsProps;
 
 export declare type CustomCursorsProps = Partial<{
     general: string;
@@ -30,3 +33,4 @@ export declare type DefaultCursorTypesProps =
 | "cyan";
 
 export { }
+
