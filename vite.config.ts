@@ -15,7 +15,7 @@ export default defineConfig({
       formats: ["es", "umd", "cjs"],
     },
     minify: true,
-    emptyOutDir: false,
+    emptyOutDir: true,
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
