@@ -1,15 +1,12 @@
 import styles from "./App.module.css";
 
-// import Cursors from "./components/index";
-
-import Cursors from "darco-cursors";
-
-// import Cursors from "../dist/";
+import Cursors, { CursorsStyles } from "./components/index";
 
 function App() {
   return (
-    <Cursors type="blue" className={styles.mainContainer}>
+    <Cursors type="pink" className={styles.mainContainer}>
       <h1 className={styles.title}>My awesome cursors ...</h1>
+      <button className={CursorsStyles.text}>Button with text cursor</button>
       <textarea
         cols={30}
         rows={10}
