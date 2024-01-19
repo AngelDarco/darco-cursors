@@ -26,6 +26,6 @@ export declare type CustomCursorsProps = Partial<{
   text: string;
 }>;
 
-declare const Cursors: (props: CursorsProps) => JSX.Element;
-
+export declare const CursorsStyles:CustomCursorsProps;
+export declare const Cursors: (props: CursorsProps) => JSX.Element;
 export default Cursors;
