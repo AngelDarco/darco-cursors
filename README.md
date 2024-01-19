@@ -1,10 +1,10 @@
 # Darco Cursors
 
-darco-cursors is a collection of Neon Cursors that you can use in your projects, to change the cursor aparience.
+darco-cursors is a collection of <strong>Neon Cursors</strong> that you can use in your projects, to change the cursor aparience.
 
 Change the cursor experience in the browser, with a collection of default Neon Cursors, or set your own set of cursors.
 
-https://github.com/AngelDarco/darco-cursors/assets/29819444/76970f38-2000-495a-af5d-964fb0c10194
+![gif](https://github.com/AngelDarco/darco-cursors/assets/29819444/09c15da4-0274-430c-b258-877411ab199d)
 
 ## Installation
 
