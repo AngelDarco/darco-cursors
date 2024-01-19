@@ -113,15 +113,15 @@ function App() {
 
 ### Alternative Usage.
 
-Use the cursorsStyles ClassName, to set a specific cursor to any element.
+Use the CursorsStyles ClassName, to set a specific cursor to any element.
 
 ```tsx
-import Cursors, { cursorsStyles } from "darco-cursors";
+import Cursors, { CursorsStyles } from "darco-cursors";
 
 function App() {
   return (
     <Cursors>
-      <div className={cursorsStyles.pointer}>
+      <div className={CursorsStyles.pointer}>
         <span>this span element will have a pointer cursor</span>
         {/* your code here... */}
       </div>
