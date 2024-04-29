@@ -4,6 +4,8 @@ darco-cursors is a collection of <strong>Neon Cursors</strong> that you can use 
 
 Change the cursor experience in the browser, with a collection of default Neon Cursors, or set your own set of cursors.
 
+[demo](https://angeldarco.github.io/darco-cursors/)
+
 ![gif](https://github.com/AngelDarco/darco-cursors/assets/29819444/09c15da4-0274-430c-b258-877411ab199d)
 
 ## Installation
